@@ -1,0 +1,107 @@
+
+.gallery-title
+{
+    font-size: 36px;
+    color: #3c0e40;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 70px;
+}
+.gallery-title:after {
+    content: "";
+    position: absolute;
+    width: 7.5%;
+    left: 46.5%;
+    height: 45px;
+    border-bottom: 1px solid #5e5e5e;
+}
+.filter-button
+{
+    font-size: 18px;
+    border: 1px solid #3c0e40;
+    border-radius: 5px;
+    text-align: center;
+    color: #3c0e40;
+    padding: 2%;
+    margin-bottom: 30px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid #42B32F;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #42B32F;
+
+}
+
+.filter-button:disabled
+{
+    font-size: 18px;
+    border: 1px solid #838383;
+    border-radius: 5px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #838383;
+
+}
+.btn-default:active .filter-button:active
+{
+    background-color: #42B32F;
+    color: white;
+}
+
+
+
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+
+
+
+
+
+
+
+.product-title-bd {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .bd-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    border-radius: 10PX;
+    background-color: #000000;
+  }
+
+
+  .gallery_product:hover .bd-overlay {
+    opacity: 0.9;
+  }
+  

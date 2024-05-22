@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="col.css">
+
+     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> 
+        <!--=============== fav ===============-->
+        <link rel="shortcut icon" href="./assets/img/bd.png" type="image/x-icon">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="./assets/js/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+
+        <script>
+            $(function () {
+                $('#header').load('header.html');
+    
+            });
+        </script>
+
+        <script>
+            $(function () {
+                $('#footer').load('footer.html');
+    
+            });
+        </script>
+
+</head>
+<body>
+    <div id="header"></div><br><br><br>
+    
+    
+
+    
+    
+ <div class="container">
+    <div class="row">
+    <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="gallery-title">Products </h1>
+    </div>
+
+    <div align="center">
+        <button class="btn btn-default filter-button" data-filter="all">All</button>
+        <button class="btn btn-default filter-button" data-filter="Refublished">Refublished</button>
+        <button class="btn btn-default filter-button" data-filter="Lenovo">Lenovo</button>
+        <button class="btn btn-default filter-button" data-filter="HP" disabled >HP</button>
+        <button class="btn btn-default filter-button" data-filter="Dell">Dell</button>
+        <button class="btn btn-default filter-button" data-filter="microsoft">Microsoft</button>
+        <button class="btn btn-default filter-button" data-filter="latitude">Latitude</button>
+        <button class="btn btn-default filter-button" data-filter="thinkpad">ThinkPad</button>
+        <button class="btn btn-default filter-button" data-filter="com">Computer</button>
+        <button class="btn btn-default filter-button" data-filter="macbook">Macbook</button>
+        <button class="btn btn-default filter-button" data-filter="apple">apple</button>
+
+    </div>
+
+
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished Dell latitude">
+            <img src="./assets/pd/dell/refub/51.png" class="img-responsive">
+            <div class="bd-overlay">
+                <div class="product-title-bd">Dell Latitude 7470</div>
+              </div>
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished Lenovo thinkpad">
+            <img src="./assets/pd/lenovo/thinkpad/refub/62.png" class="img-responsive">
+            <div class="bd-overlay">
+                <div class="product-title-bd">Dell Latitude 7470</div>
+              </div>
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished thinkpad Lenovo">
+            <img src="./assets/pd/lenovo/thinkpad/refub/45.png" class="img-responsive">
+            <div class="bd-overlay">
+                <div class="product-title-bd">Dell Latitude 7470</div>
+              </div>
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished Dell latitude">
+            <img src="./assets/pd/dell/refub/5.png" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished microsoft">
+            <img src="./assets/pd/7.png" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished Dell com">
+            <img src="./assets/pd/com/p.png" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished thinkpad Lenovo">
+            <img src="./assets/pd/lenovo/thinkpad/refub/47.png" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished apple macbook">
+            <img src="./assets/pd/m2.png" class="img-responsive">
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter Refublished thinkpad Lenovo">
+            <img src="./assets/pd/lenovo/thinkpad/refub/x1.png" class="img-responsive">
+        </div>
+
+
+    </div>
+</div>
+
+
+
+<script>$(document).ready(function(){
+
+    $(".filter-button").click(function(){
+        var value = $(this).attr('data-filter');
+        
+        if(value == "all")
+        {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        }
+        else
+        {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.'+value).hide('3000');
+            $('.filter').filter('.'+value).show('3000');
+            
+        }
+    });
+    
+    if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+</script>
+
+
+
+</body>
+</html>
